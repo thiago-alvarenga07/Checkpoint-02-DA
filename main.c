@@ -39,3 +39,24 @@ switch(escolha){ //Utiliza-se a função switch case para
 //EXERCICIO 1 - SEQUÊNCIA DE FIBONACCI    
 fibonacci(); //Declarando função para realizar os cálculos do exercicio
 }
+
+int main()
+{
+int j, i ,num;
+
+    setlocale(LC_ALL, "Portuguese");
+
+    int fatorial[num];
+  printf("Digite um numero inteiro (1 a 20): ");
+  scanf("%d", &fatorial[num]);
+
+  for (i = 1; i < num; i++){
+    for (j = 1; j >= i; j--){
+        j = j * i
+    }
+    printf("%d! = ")
+  }
+    
+
+}
+
