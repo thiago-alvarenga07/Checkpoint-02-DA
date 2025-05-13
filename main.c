@@ -138,6 +138,6 @@ switch(escolha){ //Utiliza-se a função switch case para
                 break;
         default:
                 printf("Opção ínvalida");
-
-
+        }
+}
 
