@@ -11,8 +11,10 @@
 //Exercicio 1 - Fibonacci
 void fibonacci (){ //Função que efetua calculos para gerar a sequência de Fibonacci
 int a = 0, b = 1, Fibo[50], N; //Declaração de variáveis
+
 printf("Digite a quantidade de termos da sequência de Fibonacci (1 a 50): ");
 scanf("%d", &N);
+
 if(N == 1){
     printf("Sequência de Fibonacci: %d", a);
 }
@@ -27,8 +29,7 @@ for(int i = 1; i < N-1; i++){ //o "for" é utilizado neste caso para repetir o c
         a = b;
         b = Fibo[i];
         printf("%d ", Fibo[i]);
-}
-}
+}}
 //Exercicio 2 - Fatoriais com vetores
 void fatoriais()
 {
@@ -97,9 +98,11 @@ void palindromo() {
 //Exercicio 4 - verificar substring
 void substring(){
 char palavra1[101], palavra2[101]; //declarando as variaveis para cada string, podendo conter até 100 caracteres
-int i, x, y, z, confirma = 0;
+int i, x, y, z, verificacao = 0;
+
 printf("Digite a primeira string: ");
 scanf("%100s", palavra1);
+
 printf("Digite a segunda string: ");
 scanf("%100s", palavra2);
 
@@ -115,18 +118,16 @@ int tam1 = strlen(palavra1), tam2 = strlen(palavra2);
 for(z = 0; z <= tam1 - tam2; z++){
     for(x = 0, y = z; x < tam2 && palavra1[y] == palavra2[x]; x++, y++);
     if(x == tam2){
-        confirma = 1;
+        verificacao = 1;
         break;
-    }
-}
+}}
 
 if(confirma == 1){
     printf("A segunda string está contida na primeira.");
 }
 else{
     printf("A segunda string NÃO está contida na primeira.");
-}
-}
+}}
 
 int main()
 {
@@ -134,7 +135,6 @@ setlocale(LC_ALL, "Portuguese");
 
 int escolha;
 
-setlocale(LC_ALL, "Portuguese");
 printf("===== MENU DE EXERCÍCIOS =====\n");
 printf("1 - Sequência de Fibonacci;\n");
 printf("2 - Fatoriais;\n");
@@ -145,16 +145,16 @@ scanf("%d", &escolha);
 
 switch(escolha){ //Utiliza-se a função switch case para
         case 1:
-                fibonacci();
+                fibonacci(); //Exercicio 1 - Fibonacci
                 break;
         case 2:
-                fatoriais();
+                fatoriais(); //Exercicio 2 - Fatoriais com vetores
                 break;
         case 3:
-                palindromo();
+                palindromo(); //Exercicio 3 - palindromo
                 break;
         case 4:
-                substring();
+                substring(); //Exercicio 4 - verificar substring
                 break;
         default:
                 printf("Opção ínvalida");
