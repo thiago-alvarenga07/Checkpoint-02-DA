@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
-#include <string.h>
 #include <ctype.h>
 
 //Exercicio 1 - Fibonacci
