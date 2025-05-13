@@ -86,27 +86,37 @@ void palindromo() {
 
 //Exercicio 4 - verificar substring
 void substring(){
-char palavra1[101], palavra2[101]; //declarando as variaveis para cada string, podendo conter até 100 caracteres em cada
+char palavra1[101], palavra2[101]; //declarando as variaveis para cada string, podendo conter até 100 caracteres
+int i, x, y, z, confirma = 0;
 printf("Digite a primeira string: ");
-scanf("%s", &palavra1);
+scanf("%100s", palavra1);
 printf("Digite a segunda string: ");
-scanf("%s", &palavra2);
+scanf("%100s", palavra2);
 
-for(int i = 0; palavra1[i] != '\0', palavra2[i] != '\0'; i++){ //utilizando o for para transformar ambas string em caracteres maiúsculos para evitar confusão no código
+for(i = 0; palavra1[i] != '\0'; i++){
     palavra1[i] = toupper(palavra1[i]);
+}
+for(i = 0; palavra2[i] != '\0'; i++){
     palavra2[i] = toupper(palavra2[i]);
 }
 
-char substring = strstr(palavra1, palavra2); //função 'strstr' confere se a variavel 'palavra2' está presente também na variavel 'palavra1'
+int tam1 = strlen(palavra1), tam2 = strlen(palavra2);
 
-if(substring != NULL){
+for(z = 0; z <= tam1 - tam2; z++){
+    for(x = 0, y = z; x < tam2 && palavra1[y] == palavra2[x]; x++, y++);
+    if(x == tam2){
+        confirma = 1;
+        break;
+    }
+}
+
+if(confirma == 1){
     printf("A segunda string está contida na primeira.");
 }
 else{
     printf("A segunda string NÃO está contida na primeira.");
 }
 }
-
 
 int main()
 {
