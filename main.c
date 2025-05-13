@@ -9,15 +9,22 @@ void fibonacci (){ //Função que efetua calculos para gerar a sequência de Fib
 int a = 0, b = 1, Fibo[50], N; //Declaração de variáveis
 printf("Digite a quantidade de termos da sequência de Fibonacci (1 a 50): ");
 scanf("%d", &N);
-printf("Sequência de Fibonacci: %d %d ", a, b);
-for(int i = 1; i < N; i++){ //o "for" é utilizado neste caso para repetir o calculo até a posição desejada pelo usuário
+if(N == 1){
+    printf("Sequência de Fibonacci: %d", a);
+}
+else if(N == 0){
+    printf("Número inválido, tente novamente");
+}
+else{
+    printf("Sequência de Fibonacci: %d %d ", a, b);
+}
+for(int i = 1; i < N-1; i++){ //o "for" é utilizado neste caso para repetir o calculo até a posição desejada pelo usuário
         Fibo[i] = a + b;
         a = b;
         b = Fibo[i];
         printf("%d ", Fibo[i]);
 }
 }
-
 //Exercicio 2 - Fatoriais com vetores
 void fatoriais()
 {
