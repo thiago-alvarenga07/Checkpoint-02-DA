@@ -122,7 +122,7 @@ for(z = 0; z <= tam1 - tam2; z++){
         break;
 }}
 
-if(confirma == 1){
+if(verificacao == 1){
     printf("A segunda string está contida na primeira.");
 }
 else{
