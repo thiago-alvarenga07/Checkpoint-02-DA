@@ -4,6 +4,10 @@
 #include <locale.h>
 #include <ctype.h>
 
+//Nome / RM
+//Diego Mendes: 565509
+//Thiago Alvarenga: 562695
+
 //Exercicio 1 - Fibonacci
 void fibonacci (){ //Função que efetua calculos para gerar a sequência de Fibonacci
 int a = 0, b = 1, Fibo[50], N; //Declaração de variáveis
@@ -56,19 +60,19 @@ void palindromo() {
 
   int verificacao, i, tamanho, tamanhofor;
 
-  char palavra[101];
+  char palavra[101]; // string com no maximo 100 caracteres
 
   printf("Digite uma string: ");
   scanf("%s", palavra);
 
-  tamanho = strlen(palavra);
+  tamanho = strlen(palavra); //aderir o tamanho da string ou seja quantas letras tem a string na variavel tamanho
 
-  tamanhofor =  tamanho;
+  tamanhofor =  tamanho; //nova varivavel para nao alterar o valor do tamanho no for
   tamanho--;
 
-  for(i = 0; i != tamanhofor / 2; i++)
+  for(i = 0; i != tamanhofor / 2; i++) //for para executar o comando até terminar de verificar a palavra para ver se ela é um palindromo
   {
-    if (palavra[i] == palavra[tamanho])
+    if (palavra[i] == palavra[tamanho]) //if para comparar a letra armazenada na posição i com a letra armazenda na posição tamanho se forem iguais a verificação = 1 se não verificação = 0
     {
       verificacao = 1;
     }
@@ -78,7 +82,7 @@ void palindromo() {
     }
     tamanho--;
   }
-  if (verificacao == 1)
+  if (verificacao == 1) //if para analisar se a verificação se manteve = 1 se sim a palavra é um palindromo se não, a palavra não é um palindromo
   {
       printf("A palavra é um palindromo");
   }
