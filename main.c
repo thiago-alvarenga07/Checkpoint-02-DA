@@ -68,3 +68,44 @@ int main()
 
 }
 
+//Exercicio 3 - palindromo
+
+int main() {
+
+  setlocale(LC_ALL, "Portuguese");
+
+  int s, i, tamanho, tamanhofor;
+
+  char palavra[101];
+
+  printf("Digite uma string: ");
+  scanf("%s", palavra);
+
+  tamanho = strlen(palavra);
+
+  tamanhofor =  tamanho;
+  tamanho--;
+
+  for(i = 0; i != tamanhofor / 2; i++)
+  {
+    if (palavra[i] == palavra[tamanho])
+    {
+      s = 1;
+    }
+    else
+    {
+        s = 0;
+    }
+    tamanho--;
+  }
+  if (s == 1)
+  {
+      printf("A palavra é um palindromo");
+  }
+  else
+  {
+      printf("A palavra não é um palindromo");
+  }
+}
+
+
