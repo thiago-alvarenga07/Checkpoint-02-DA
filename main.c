@@ -24,9 +24,9 @@ void fatoriais()
 {
     int i ,num;
 
-    int fatorial[num];
     printf("Digite um numero inteiro (1 a 20): ");
     scanf("%d", &num);
+    int fatorial[num];
 
     printf("Fatoriais:\n");
     for (i = 0; i < num; i++)
