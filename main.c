@@ -74,7 +74,7 @@ int main() {
 
   setlocale(LC_ALL, "Portuguese");
 
-  int s, i, tamanho, tamanhofor;
+  int verificacao, i, tamanho, tamanhofor;
 
   char palavra[101];
 
@@ -90,15 +90,15 @@ int main() {
   {
     if (palavra[i] == palavra[tamanho])
     {
-      s = 1;
+      verificacao = 1;
     }
     else
     {
-        s = 0;
+        verificacao = 0;
     }
     tamanho--;
   }
-  if (s == 1)
+  if (verificacao == 1)
   {
       printf("A palavra é um palindromo");
   }
