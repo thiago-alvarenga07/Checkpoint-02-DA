@@ -3,7 +3,7 @@
 #include <math.h>
 #include <locale.h>
 
-int fibonacci (){ //Função que efetua calculos para gerar a sequência de Fibonacci
+void fibonacci (){ //Função que efetua calculos para gerar a sequência de Fibonacci
 int a = 0, b = 1, Fibo[50], N; //Declaração de variáveis
 printf("Digite a quantidade de termos da sequência de Fibonacci (1 a 50): ");
 scanf("%d", &N);
@@ -15,6 +15,29 @@ for(int i = 1; i < N; i++){ //o "for" é utilizado neste caso para repetir o cal
         printf("%d ", Fibo[i]);
 }
 }
+
+void substring(){
+char palavra1[101], palavra2[101]; //declarando as variaveis para cada string, podendo conter até 100 caracteres em cada
+printf("Digite a primeira string: ");
+scanf("%s", &palavra1);
+printf("Digite a segunda string: ");
+scanf("%s", &palavra2);
+
+for(int i = 0; palavra1[i] != '\0', palavra2[i] != '\0'; i++){
+    palavra1[i] = toupper(palavra1[i]);
+    palavra2[i] = toupper(palavra2[i]);
+}
+
+char substring = strstr(palavra1, palavra2);
+
+if(substring != NULL){
+    printf("A segunda string está contida na primeira.");
+}
+else{
+    printf("A segunda string NÃO está contida na primeira.");
+}
+}
+
 
 int main()
 {
