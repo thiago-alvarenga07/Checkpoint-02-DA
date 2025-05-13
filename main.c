@@ -40,23 +40,31 @@ switch(escolha){ //Utiliza-se a função switch case para
 fibonacci(); //Declarando função para realizar os cálculos do exercicio
 }
 
+
+//Exercicio 2 - Fatoriais com vetores
 int main()
 {
-int j, i ,num;
+    int i ,num;
 
     setlocale(LC_ALL, "Portuguese");
 
     int fatorial[num];
-  printf("Digite um numero inteiro (1 a 20): ");
-  scanf("%d", &fatorial[num]);
+    printf("Digite um numero inteiro (1 a 20): ");
+    scanf("%d", &num);
 
-  for (i = 1; i < num; i++){
-    for (j = 1; j >= i; j--){
-        j = j * i
+    printf("Fatoriais:\n");
+    for (i = 0; i < num; i++)
+    {
+        if(i == 0) //if usado pois a formula usada no else não consegue calcular o fatorial da primeira posição
+        {
+          fatorial[i] = 1;
+        }
+        else
+        {
+            fatorial[i] = (i + 1) * fatorial[i - 1]; //Formula utilizada para calcular o valor do fatorial de acordo com a posição no vetor
+        }
+        printf("%d! = %d\n", i + 1, fatorial[i]);
     }
-    printf("%d! = ")
-  }
-    
 
 }
 
