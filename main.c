@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
+#include <string.h>
+#include <ctype.h>
 
 void fibonacci (){ //Função que efetua calculos para gerar a sequência de Fibonacci
 int a = 0, b = 1, Fibo[50], N; //Declaração de variáveis
@@ -23,12 +25,12 @@ scanf("%s", &palavra1);
 printf("Digite a segunda string: ");
 scanf("%s", &palavra2);
 
-for(int i = 0; palavra1[i] != '\0', palavra2[i] != '\0'; i++){
+for(int i = 0; palavra1[i] != '\0', palavra2[i] != '\0'; i++){ //utilizando o for para transformar ambas string em caracteres maiúsculos para evitar confusão no código
     palavra1[i] = toupper(palavra1[i]);
     palavra2[i] = toupper(palavra2[i]);
 }
 
-char substring = strstr(palavra1, palavra2);
+char substring = strstr(palavra1, palavra2); //função 'strstr' confere se a variavel 'palavra2' está presente também na variavel 'palavra1'
 
 if(substring != NULL){
     printf("A segunda string está contida na primeira.");
