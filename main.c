@@ -131,7 +131,7 @@ else{
 
 int main()
 {
-setlocale(LC_ALL, "Portuguese");
+setlocale(LC_ALL, "");
 
 int escolha;
 
